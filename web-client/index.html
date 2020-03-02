@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<title>Suhu Lab</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/w3.css">
+<link rel="stylesheet" href="./css/w3-theme-black.css">
+<link rel="stylesheet" href="./css/font-awesome.min.css">
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(0,0,0,0.3);
+   color: black;
+   text-align: center;
+}
+</style>
+<body id="myPage">
+	<!-- Navbar -->
+	<div class="w3-top">
+		<div class="w3-bar w3-theme-d2 w3-left-align">
+			<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+			<a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-microchip w3-margin-right"></i>Raspberry PI™</a>
+			<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="openPage('home')">Home</a>
+			<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="openPage('grafik')">Temperature</a>
+			<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="openPage('about')">Screening</a>
+		</div>
+		  <!-- Navbar on small screens -->
+		<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+			<a href="#" class="w3-bar-item w3-button" onclick="openPage('home')">Home</a>
+			<a href="#" class="w3-bar-item w3-button" onclick="openPage('grafik')">Temperature</a>
+			<a href="#" class="w3-bar-item w3-button" onclick="openPage('about')">Screening</a>
+		</div>
+	</div>
+
+	<!--Content Grafik-->
+	<div class="w3-container w3-padding-64 w3-center" id="grafik">
+		<h2>Data Grafik Temperature Ruang Server</h2>
+		<div class="w3-cell-row">    
+			<div class="w3-container w3-cell w3-bar-block" style="width:15%">
+				<a href="#" class="w3-bar-item w3-button">Last 2 Hours</a>
+				<a href="#" class="w3-bar-item w3-button w3-hover-black">Last 24 Hours</a>
+				<a href="#" class="w3-bar-item w3-button w3-hover-green">Last 3 days</a>
+				<a href="#" class="w3-bar-item w3-button w3-hover-blue">Last 1 Weeks</a>
+				<a href="#" class="w3-bar-item w3-button w3-hover-red">Liast 3 Months</a>
+			</div>
+
+			<div class="w3-container w3-cell">
+				<div id="chartContainer" style="height: 300px; width: 100%;"></div><br/>
+			</div>
+		</div> 
+	</div>
+
+	<!--Content Home-->
+	<div class="w3-container w3-padding-64 w3-center" id="home">
+		<br/><br/><br/>
+		<h2>Temperatur Ruang Server</h2>
+		<H1 style="font-size:120px" id="suhu">30°C</H1>
+		<p id="lastSuhu">80°F | 99°R | 103K</p>
+		<p>Update Terakhir: <p id="waktuSuhu"></p></p>
+	</div>
+
+	<!--Content About-->
+	<div class="w3-container w3-padding-64 w3-center" id="about">
+		<h2>About Us</h2> 
+	</div>
+
+	<!-- Footer -->
+	<div class="footer">
+		<h4>© Copyright Angga 2020</h4>
+		<!--<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="./js/canvasjs.min.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+</html>
